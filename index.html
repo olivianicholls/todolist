@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link href='styles.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+</head>
+<body>
+  <div class='container'>
+
+  <section class='instructions'>
+    
+    <div id='instructions-wrapper'>                                                     
+    <h1>To Do List</h1>
+      <ul class='instructions-list'>
+         <li class='instructions-li' id='instructions-add'>Use the + button to add your task to the list</li>
+      <li class='instructions-li' id='instructions-xo'>Use the X/O button to toggle between New and Completed</li>
+      <li class='instructions-li' id='instructions-x'>Use the X button to delete a task</li>
+      <li class='instructions-li' id='instructions-filters'>Use the filters on the bottom to show certain tasks (expect the ones you've deleted!)</li>
+      <li class='instructions-li' >Use the dropdown menu on each task to select one of the following options:</li>
+        <div class='options'>
+          <ul>
+    <li class='instructions-li' >O - Task has yet to be started</li>
+    <li class='instructions-li'>\ - Task is currently being worked on</li>
+    <li class='instructions-li'>> - Task has been pushed forward to be completed later</li>
+    <li class='instructions-li'>X - Task has been completed</li>
+          </ul>
+   
+      </ul>
+     
+        </div>
+    </div>
+    
+  </section>
+    
+  <section class='list-wrapper'>
+    
+    <div class='top'>
+      <label for='toggleAll'>
+          <button id='toggleAll' class='toggleAll' onclick='handlers.toggleAll()'>X/O</button>
+        </label>
+        <label for='addTaskTextInput'>
+          <input id='addTaskTextInput' type='text' placeholder='I need to...' onkeydown="if (event.keyCode == 13) { handlers.addTask()}">
+        </label>
+        <button id='addButton' onclick='handlers.addTask()'}>+</button>
+    </div>
+  
+    <ul id='tasklist'></ul>
+    
+    <div id='filter-buttons'>
+      <button class='filterButton' onclick='handlers.filterTasks()'>New</button>
+      <button class='filterButton' onclick='handlers.filterTasks()'>Doing</button>
+      <button class='filterButton' onclick='handlers.filterTasks()'>Moved</button>
+      <button class='filterButton' onclick='handlers.filterTasks()'>Done</button>
+    </div>
+    <button class='filterButton' id='showAll' onclick='handlers.showAll()'>All</button>
+    
+  </section>
+</div>
+
+  <script src='script.js'></script>
+</body>
+</html>
