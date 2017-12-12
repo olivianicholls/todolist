@@ -12,24 +12,25 @@ body {
   margin: 0 auto;
   width: 70%;
 }
-#instructions-wrapper {
-  margin-top: 50px;
+.instructions-wrapper {
+  margin: 50px;
 }
 .instructions h1 {
   font-size: 40px;
   text-align: center;
 }
 .instructions p {
-  font-size: 24px;
+  font-size: 23px;
+  text-align: justify;
 }
 .options p{
-  font-size: 22px;
+  font-size: 21px;
+  margin-left: 70px;
 }
 .list-wrapper, .instructions {
   position: relative;
   float: left;
   background-color: #F7F4DC;
-/*   background-image: url('https://i.stack.imgur.com/pvbki.png'); */
   margin: 0 auto;
   width: 48%;
   height: 700px;
@@ -130,16 +131,6 @@ li {
 }
 li:focus {
   outline: none;
-}
-.instructions-list {
-  position: relative;
-  left: 40px;
-  bottom: 20px;
-  font-size: 24px;
-}
-.instructions-li {
-  border: none;
-  list-style-type: disc;
 }
 .task {
   display: inline;
