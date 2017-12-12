@@ -1,0 +1,197 @@
+body {
+  background-color: #355fa3;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+}
+.container {
+  margin: 80px auto;
+  width: 90%;
+  height: 70%;
+}
+.instructions {
+  margin: 0 auto;
+  width: 70%;
+}
+#instructions-wrapper {
+  margin-top: 50px;
+}
+.instructions h1 {
+  font-size: 40px;
+  text-align: center;
+}
+.instructions p {
+  font-size: 24px;
+}
+.options p{
+  font-size: 22px;
+}
+.list-wrapper, .instructions {
+  position: relative;
+  float: left;
+  background-color: #F7F4DC;
+/*   background-image: url('https://i.stack.imgur.com/pvbki.png'); */
+  margin: 0 auto;
+  width: 48%;
+  height: 700px;
+  margin-bottom: 150px;
+  border: 2px solid #000;
+  overflow: hidden;
+}
+.list-wrapper {
+  border-radius: 6px 18px 18px 6px;
+}
+.instructions {
+  border-radius: 18px 6px 6px 18px;
+}
+.top {
+  width: 100%;
+  height: 50px;
+}
+button {
+  font-family: 'Amatic SC', cursive;
+  background-color: #F7F4DC;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-size: 20px;
+  height: 60px;
+  width: 10%;
+}
+button:focus {
+  outline: none;
+}
+#toggleAll {
+  font-weight: 700;
+  float: left;
+  border-right: 2px solid #000;
+  border-radius: 15px 0 0 0;
+}
+#addButton {
+  border-radius: 0 15px 0 0;
+  border-left: 2px solid #000;
+  float: right;
+  font-size: 40px;
+  font-weight: 700;
+}
+input {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  box-sizing: border-box;
+  height: 60px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #000;
+  background-color:#F7F4DC;
+  padding: 10px;
+  width: 80%;
+
+}
+input:focus, input:enabled {
+  outline: none;
+  padding: 0 20%;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  text-align: center;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+  text-align: center;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+  text-align: center;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+ul {
+  width: 100%;
+  position: relative;
+  right: 40px;
+  top: -5px;
+}
+li {
+  list-style-type: none;
+  box-sizing: border-box;
+  height: 60px;
+  border-radius: 0;
+  border-bottom: 1px dashed #AEAEAE;
+  padding: 10px 0;
+  font-weight: 400;
+}
+li:focus {
+  outline: none;
+}
+.instructions-list {
+  position: relative;
+  left: 40px;
+  bottom: 20px;
+  font-size: 24px;
+}
+.instructions-li {
+  border: none;
+  list-style-type: disc;
+}
+.task {
+  display: inline;
+  padding-left: 20px;
+  font-size: 30px;
+}
+.deleteButton, .toggleButton {
+  position: relative;
+  top: -11px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: 700;
+  font-size: 30px;
+}
+.deleteButton{  
+  float: right;
+  border-left: 2px solid #000;
+}
+.toggleButton {
+  float: left;
+  font-family: 'Amatic SC', cursive;
+  border-left: none;
+  border-right: 2px solid #000;
+  width: 10%;
+  padding: 0 2.5%;
+}
+.toggleButton:focus {
+  outline: none;
+}
+#filter-buttons {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+}
+.filterButton {
+  font-weight: 700;
+  width: 25%;
+  float: left;
+  border-top: 2px solid #000;
+ border-right: 2px solid #000;
+  border-bottom: none;
+}
+.filterButton:last-child {
+  border-right: none;
+}
+#showAll {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 700;
+}
