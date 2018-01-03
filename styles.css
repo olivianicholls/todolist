@@ -1,60 +1,79 @@
 body {
-  background-color: #355fa3;
-  font-family: 'Amatic SC', cursive;
-  font-weight: 700;
+background: rgba(255,184,140,1);
+background: -moz-linear-gradient(45deg, rgba(255,184,140,1) 0%, rgba(222,98,98,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,184,140,1)), color-stop(100%, rgba(222,98,98,1)));
+background: -webkit-linear-gradient(45deg, rgba(255,184,140,1) 0%, rgba(222,98,98,1) 100%);
+background: -o-linear-gradient(45deg, rgba(255,184,140,1) 0%, rgba(222,98,98,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(255,184,140,1) 0%, rgba(222,98,98,1) 100%);
+background: linear-gradient(45deg, rgba(255,184,140,1) 0%, rgba(222,98,98,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb88c', endColorstr='#de6262', GradientType=1 );
+  background-attachment: fixed;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
 }
 .container {
   margin: 80px auto;
-  width: 90%;
-  height: 70%;
 }
-.instructions {
-  margin: 0 auto;
-  width: 70%;
-}
-.instructions-wrapper {
+#instructions-wrapper {
   margin: 50px;
 }
-.instructions h1 {
+#instructions h1 {
   font-size: 40px;
   text-align: center;
 }
-.instructions p {
+.instructions-text {
   font-size: 23px;
   text-align: justify;
+  margin: 50px 0 0 60px;
 }
-.options p{
+.options{
   font-size: 21px;
-  margin-left: 70px;
+  margin-left: 90px;
 }
-.list-wrapper, .instructions {
-  position: relative;
-  float: left;
-  background-color: #F7F4DC;
-  margin: 0 auto;
-  width: 48%;
-  height: 700px;
+#startButton {
+  height: 60px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 15px;
+  float: right;
+  width: 14%;
+  font-weight: 300;
+}
+#instructionsButton {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+#list-wrapper, #instructions {
+  position: absolute;
+  border-radius: 18px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 10%;
+  width: 80%;
+  height: 800px;
   margin-bottom: 150px;
-  border: 2px solid #000;
   overflow: hidden;
 }
-.list-wrapper {
-  border-radius: 6px 18px 18px 6px;
-}
-.instructions {
-  border-radius: 18px 6px 6px 18px;
+#list-wrapper {
+  display: none;
 }
 .top {
   width: 100%;
   height: 50px;
 }
 button {
-  font-family: 'Amatic SC', cursive;
-  background-color: #F7F4DC;
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
   border-radius: 0;
   border: none;
-  border-bottom: 2px solid #000;
   color: #000;
   font-size: 20px;
   height: 60px;
@@ -66,25 +85,24 @@ button:focus {
 #toggleAll {
   font-weight: 700;
   float: left;
-  border-right: 2px solid #000;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 15px 0 0 0;
 }
 #addButton {
   border-radius: 0 15px 0 0;
-  border-left: 2px solid #000;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
   float: right;
   font-size: 40px;
   font-weight: 700;
 }
 input {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Lato', sans-serif;
   font-size: 30px;
   box-sizing: border-box;
   height: 60px;
   border-radius: 0;
   border: none;
-  border-bottom: 2px solid #000;
-  background-color:#F7F4DC;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 10px;
   width: 80%;
 
@@ -126,7 +144,7 @@ li {
   height: 60px;
   border-radius: 0;
   border-bottom: 1px dashed #AEAEAE;
-  padding: 10px 0;
+  padding: 10px;
   font-weight: 400;
 }
 li:focus {
@@ -134,7 +152,7 @@ li:focus {
 }
 .task {
   display: inline;
-  padding-left: 20px;
+  padding-left: 60px;
   font-size: 30px;
 }
 .deleteButton, .toggleButton {
@@ -150,13 +168,13 @@ li:focus {
 }
 .deleteButton{  
   float: right;
-  border-left: 2px solid #000;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
 }
 .toggleButton {
   float: left;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Lato', sans-serif;
   border-left: none;
-  border-right: 2px solid #000;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
   width: 10%;
   padding: 0 2.5%;
 }
@@ -172,8 +190,8 @@ li:focus {
   font-weight: 700;
   width: 25%;
   float: left;
-  border-top: 2px solid #000;
- border-right: 2px solid #000;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
   border-bottom: none;
 }
 .filterButton:last-child {
