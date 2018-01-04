@@ -64,6 +64,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb88c', end
 #list-wrapper {
   display: none;
 }
+#noTasksShown {
+  display: none;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 60px;
+  text-align: center;
+  margin: 160px;
+}
 .top {
   width: 100%;
   height: 50px;
@@ -83,7 +90,6 @@ button:focus {
   outline: none;
 }
 #toggleAll {
-  font-weight: 700;
   float: left;
   border-right: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 15px 0 0 0;
@@ -93,7 +99,6 @@ button:focus {
   border-left: 2px solid rgba(0, 0, 0, 0.3);
   float: right;
   font-size: 40px;
-  font-weight: 700;
 }
 input {
   font-family: 'Lato', sans-serif;
@@ -165,6 +170,7 @@ li:focus {
   background-color: rgba(0, 0, 0, 0);
   font-weight: 700;
   font-size: 30px;
+  width: 9.4%;
 }
 .deleteButton{  
   float: right;
@@ -175,7 +181,6 @@ li:focus {
   font-family: 'Lato', sans-serif;
   border-left: none;
   border-right: 2px solid rgba(0, 0, 0, 0.3);
-  width: 10%;
   padding: 0 2.5%;
 }
 .toggleButton:focus {
@@ -204,3 +209,4 @@ li:focus {
   width: 100%;
   font-weight: 700;
 }
+
