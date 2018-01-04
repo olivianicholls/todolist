@@ -43,7 +43,9 @@ let handlers = {
       for (let i = 0; i < tasklist.tasks.length; i++) {
         let tasksSelects = document.getElementsByClassName("toggleButton")[i];
         let task = document.getElementsByTagName("li")[i];
+        let noTasksShown = document.getElementById('noTasksShown');
         let taskOption = "";
+        let shownTasks = 0;
 
         if (tasksSelects.selectedIndex === 0) {
           taskOption = "New";
@@ -62,17 +64,28 @@ let handlers = {
         if (elementClicked.textContent !== taskOption) {
           hide(task[i]);
         }
+        
+        if (task.style.display === 'block') {
+          shownTasks++
+        }
+        
+       if (shownTasks === 0 ) {
+        noTasksShown.style.display = 'block'
+       }
       }
     });
   },
   showAll: function() {
     for (let i = 0; i < tasklist.tasks.length; i++) {
       let tasks = document.getElementsByTagName("li");
+      let noTasksShown = document.getElementById('noTasksShown');
 
       let show = function() {
         tasks[i].style.display = "block";
+        noTasksShown.style.display = 'none'
       };
       show(tasks);
+      
     }
   },
   start: function() {
